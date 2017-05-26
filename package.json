@@ -1,0 +1,25 @@
+{
+  "name": "image-search",
+  "version": "1.0.0",
+  "description": "A simple image search API with demo written with React",
+  "main": "bin/start.js",
+  "scripts": {
+    "start": "node bin/start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DCtheTall/image-search.git"
+  },
+  "author": "Dylan Cutler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DCtheTall/image-search/issues"
+  },
+  "homepage": "https://github.com/DCtheTall/image-search#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "morgan": "^1.8.2",
+    "pug": "^2.0.0-rc.1"
+  }
+}
