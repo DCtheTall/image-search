@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
+const routes = require('./routes');
 
 const app = express();
 
@@ -13,6 +14,6 @@ app.use(bodyParser.json({ limit: '5mb' }));
 app.set('view engine', 'pug');
 app.set('views', `${__dirname}/views`);
 
-app.get('/', (req, res) => res.render('index'));
+app.use(routes);
 
 module.exports = app;

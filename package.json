@@ -17,8 +17,11 @@
   },
   "homepage": "https://github.com/DCtheTall/image-search#readme",
   "dependencies": {
+    "axios": "^0.16.1",
+    "bluebird": "^3.5.0",
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
+    "mongodb": "^2.2.27",
     "morgan": "^1.8.2",
     "pug": "^2.0.0-rc.1"
   }
