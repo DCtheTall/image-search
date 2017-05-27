@@ -21,8 +21,12 @@
     "bluebird": "^3.5.0",
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
+    "moment": "^2.18.1",
     "mongodb": "^2.2.27",
     "morgan": "^1.8.2",
     "pug": "^2.0.0-rc.1"
+  },
+  "devDependencies": {
+    "dotenv": "^4.0.0"
   }
 }
