@@ -1,2 +1,4 @@
 node_modules/
 .env
+public/demo.*
+.sass-lint.yml
