@@ -8,8 +8,15 @@ module.exports = {
     path: path.resolve('public'),
     filename: 'demo.js',
   },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
   module: {
     loaders: [
+      {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader!sass-loader' }),
+      },
       {
         test: /\.jsx?$/,
         loader: 'babel-loader',
@@ -17,10 +24,6 @@ module.exports = {
         query: {
           presets: ['react', 'es2015', 'stage-2'],
         },
-      },
-      {
-        test: /\.scss$/,
-        loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader!sass-loader' }),
       },
     ],
   },

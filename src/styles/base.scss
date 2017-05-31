@@ -1,8 +1,19 @@
 #entry-point {
   background: #333;
+  color: #ddd;
   height: 100vh;
   left: 0;
   position: fixed;
   top: 0;
   width: 100%;
+}
+
+button {
+  background: none;
+  border: 0;
+  outline: none;
+
+  &:active {
+    outline: none;
+  }
 }
