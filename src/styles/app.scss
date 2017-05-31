@@ -11,16 +11,41 @@
 }
 
 .image-results {
-  margin-left: 10%;
+  margin: 30px 10%;
   width: 80%;
+
+  @media only screen and (max-width: 767px) {
+    margin-left: 0;
+    width: 100%;
+  }
 
   button {
     display: block;
     height: 250px;
     margin: 10px auto;
 
+    @media only screen and (max-width: 767px) {
+      margin: 5px auto;
+    }
+
     img {
+      border: 1px solid #88a;
+      box-shadow: 5px 5px 0 fade-out(#8ac, .7);
+      display: block;
+      margin: 0 auto;
       max-height: 250px;
+
+      @media only screen and (max-width: 767px) {
+        max-height: 200px;
+        max-width: 250px;
+      }
     }
   }
+}
+
+.spinner {
+  color: #ccc;
+  font-size: 128px;
+  margin-top: 60px;
+  text-align: center;
 }

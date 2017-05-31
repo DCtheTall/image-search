@@ -4,6 +4,7 @@ import axios from 'axios';
 import Promise from 'bluebird';
 import {
   ImageResult,
+  PageSelect,
   SearchBar,
 } from './components';
 import './styles/app.scss';
@@ -19,14 +20,20 @@ class App extends React.Component {
       searching: false,
     }
     this.getImgSources = this.getImgSources.bind(this);
+    this.getImageThumbnails = this.getImageThumbnails.bind(this);
+    this.setPage = this.setPage.bind(this);
   }
 
   getImgSources(query) {
-    Promise.promisify(this.setState).call(this, { error: false, searching: true, imgSources: [] })
+    Promise.promisify(this.setState).call(this, { currentSearch: query, error: false, searching: true, imgSources: [] })
       .then(() => axios.get(`/api/imagesearch/${query}?offset=${10 * this.state.currentPage}`))
       .then((json) => {
         if (json.status === 200) {
-          this.setState({ imgSources: json.data, searching: false });
+          this.setState({
+            imgSources: json.data,
+            searching: false,
+            currentPage: query === this.state.currentSearch ? this.state.currentPage : 0,
+          });
         } else {
           console.log(json);
           this.setState({ searching: false, error: true });
@@ -49,6 +56,12 @@ class App extends React.Component {
     ))
   }
 
+  setPage(value) {
+    console.log(value);
+    Promise.promisify(this.setState).call(this, { currentPage: value })
+      .then(() => this.getImgSources(this.state.currentSearch));
+  }
+
   render() {
     return (
       <div className="app-container container">
@@ -67,8 +80,14 @@ class App extends React.Component {
           </div>
         )}
         {Boolean(this.state.imgSources.length) && (
-          <div className="row image-results">
-           {this.getImageThumbnails()}
+          <div>
+            <div className="row image-results">
+              {this.getImageThumbnails()}
+            </div>
+            <PageSelect
+              currentPage={this.state.currentPage}
+              setPage={this.setPage}
+            />
           </div>
         )}
       </div>

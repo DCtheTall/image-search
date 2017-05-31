@@ -1,0 +1,41 @@
+@import './base';
+
+.search-bar-container {
+  background: #fff;
+  border: 1px solid #88a;
+  box-shadow: 5px 5px 0 fade-out(#8ac, .7);
+  font-size: 18px;
+  margin: 200px auto 0;
+  min-width: 250px;
+  padding: 10px;
+  width: 50%;
+
+  @media only screen and (max-width: 767px) {
+    margin: 100px auto 0;
+  }
+
+  @media only screen and (max-width: 767px) {
+    font-size: 12px;
+  }
+
+  input {
+    color: #333;
+    width: 80%;
+  }
+
+  button {
+    color: #333;
+    display: inline;
+    float: right;
+  }
+}
+
+.search-bar-container-active {
+  font-size: 14px;
+  margin-top: 30px;
+  max-width: 250px;
+
+  @media only screen and (max-width: 767px) {
+    font-size: 12px;
+  }
+}

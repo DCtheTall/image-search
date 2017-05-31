@@ -1,6 +1,6 @@
 #entry-point {
-  background: #333;
-  color: #ddd;
+  background: #fff;
+  color: #333;
   height: 100vh;
   left: 0;
   position: fixed;
@@ -12,7 +12,18 @@ button {
   background: none;
   border: 0;
   outline: none;
+  text-align: center;
 
+  &:active {
+    outline: none;
+  }
+}
+
+input {
+  border: 0;
+  outline: none;
+
+  &:hover,
   &:active {
     outline: none;
   }
