@@ -11,7 +11,7 @@ function PageSelect({ currentPage, setPage }) {
   return (
     <div className="page-select-container row">
       {!!currentPage && (
-        <div className="col-xs-2">
+        <div className="col-xs-3">
           <button
             onClick={() => setPage(0)}
           >
@@ -21,7 +21,7 @@ function PageSelect({ currentPage, setPage }) {
         </div>
       )}
       {!!currentPage && (
-        <div className="col-xs-2">
+        <div className="col-xs-3">
           <button
             onClick={() => setPage(currentPage - 1)}
           >
@@ -29,11 +29,11 @@ function PageSelect({ currentPage, setPage }) {
           </button>
         </div>
       )}
-      {!currentPage && <div className="col-xs-4" />}
-      <div className="col-xs-4">
+      {!currentPage && <div className="col-xs-6 spacer" />}
+      <div className="col-xs-3">
         {`Page ${currentPage + 1}`}
       </div>
-      <div className="col-xs-4">
+      <div className="col-xs-3">
         <button
           onClick={() => setPage(currentPage + 1)}
         >

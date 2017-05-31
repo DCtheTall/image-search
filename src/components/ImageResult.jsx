@@ -15,6 +15,10 @@ function ImageResult({ name, thumbnail, url }) {
     </div>
   );
 }
-ImageResult.propTypes = {};
+ImageResult.propTypes = {
+  name: PropTypes.string,
+  thumbnail: PropTypes.string,
+  url: PropTypes.string,
+};
 
 export default ImageResult;
