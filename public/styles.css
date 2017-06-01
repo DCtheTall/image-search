@@ -1,9 +1,84 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Questrial');
+body {
+  background: #fff;
+  color: #333;
+  font-family: Roboto;
+}
 
 .center {
-  font-family: 'Roboto Mono';
   font-size: 20px;
   margin-top: 100px;
   text-align: center;
   width: 100%;
+}
+
+.heading {
+  color: #666;
+  text-align: center;
+}
+
+.heading h4 {
+  color: #88a;
+}
+
+a,
+a:active,
+a:hover {
+  color: #468;
+  margin-left: 5px;
+  text-decoration: none;
+}
+
+.content {
+  background: #efefef;
+  margin-left: 10%;
+  padding: 10px;
+  padding-bottom: 30px;
+  width: 80%;
+}
+
+.description {
+  text-align: center;
+}
+
+.content a {
+  text-align: center;
+}
+
+.content a,
+.content a:active,
+.content a:hover {
+  color: #88a;
+}
+
+.code {
+  background: #333;
+  color: #fff;
+  font-family: 'Roboto Mono';
+  font-size: 12px;
+  padding: 5px;
+  word-wrap: break-word;
+}
+
+.signature {
+  color: #88a;
+  font-size: 16px;
+  margin: 40px auto 30px;
+  text-align: center;
+  width: 300px;
+}
+
+.signature img {
+  border: 2px solid #aaa;
+  border-radius: 50%;
+  margin: 10px auto;
+  width: 100px;
+}
+
+.signature a,
+.signature a:hover,
+.signature a:active {
+  color: #468;
+  cursor: pointer;
+  margin: 0 5px;
+  text-decoration: none;
 }

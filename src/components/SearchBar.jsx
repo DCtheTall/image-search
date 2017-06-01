@@ -12,8 +12,8 @@ class SearchBar extends React.Component {
   }
 
   onEnterPress(event) {
-    const keyCode = event.keyCode ? event.keyCode : event.which;
-    if (keyCode === 13) this.searchImages(this.state.searchQuery);
+    const keyCode = typeof event.which === 'number' ? event.which : event.keyCode;
+    if (keyCode === 13) this.props.searchImages(this.state.searchQuery);
   }
 
   render() {
@@ -24,7 +24,7 @@ class SearchBar extends React.Component {
           placeholder={(this.props.currentSearch || 'Search the web for images')}
           value={this.state.searchQuery}
           onChange={({ target: { value } }) => this.setState({ searchQuery: value })}
-          onKeyDown={this.onEnterPress}
+          onKeyPress={this.onEnterPress}
         />
         {this.state.searchQuery
           && this.state.searchQuery !== this.props.currentSearch
