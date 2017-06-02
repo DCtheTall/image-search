@@ -28,7 +28,7 @@ class App extends React.Component {
     Promise.promisify(this.setState).call(this, { currentSearch: query, error: false, searching: true, imgSources: [] })
       .then(() => axios.get(`/api/imagesearch/${query}?offset=${10 * this.state.currentPage}`))
       .then((json) => {
-        if (json.status === 200) {
+        if (Array.isArray(json.data)) {
           this.setState({
             imgSources: json.data,
             searching: false,

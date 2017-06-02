@@ -156,3 +156,10 @@ input {
   font-size: 128px;
   margin-top: 100px;
   text-align: center; }
+
+.error {
+  color: #f88;
+  font-family: 'Robot Mono';
+  font-size: 16px;
+  margin-top: 30px;
+  text-align: center; }
