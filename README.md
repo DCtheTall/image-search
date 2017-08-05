@@ -3,7 +3,8 @@
 This project is part of Free Code Camp's back-end ceritification program.
 It is an image search abstraction layer built on top of Microsoft's Bing API.
 This is ***not*** a search engine.
-# [Live Demo](https://dcthetall-image-search.herokuapp.com/demo)
+### ~~[Live Demo](https://dcthetall-image-search.herokuapp.com/demo)~~
+Demo is currently not functional because my API key expired, if you want to see it in action, contact me!
 # Example API usage:
 ## Searching images:
 #### Example request:
